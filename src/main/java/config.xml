@@ -9,18 +9,40 @@
     http://www.springframework.org/schema/context 
     http://www.springframework.org/schema/context/spring-context.xsd ">
 
-<bean class ="com.springcore.Student" name = "student1">
-    <property name = "studentId" >
-           <value>2234</value>
-    </property>
-    <property name = "studentName" >
-           <value>Adarsh Kumar</value>
-    </property>
-    <property name = "studentAddress" >
-           <value>Delhi</value>
-    </property>
+<!--     This is first way to declare bean -->
 
-</bean>
+<!-- <bean class ="com.springcore.Student" name = "student1"> -->
+<!--     <property name = "studentId" > -->
+<!--            <value>2234</value> -->
+<!--     </property> -->
+<!--     <property name = "studentName" > -->
+<!--            <value>Adarsh Kumar</value> -->
+<!--     </property> -->
+<!--     <property name = "studentAddress" > -->
+<!--            <value>Delhi</value> -->
+<!--     </property> -->
+
+<!-- </bean> -->
+
+
+<!--       Second way ===> value as attribute -->
+
+
+<!--     <bean class ="com.springcore.Student" name = "student1"> -->
+<!--         <property name="studentId" value ="2234"/> -->
+<!--         <property name ="studentName" value ="Adarsh kumar"/> -->
+<!--         <property name = "studentAddress" value ="Delhi"/> -->
+<!--      </bean> -->
+
+        
+<!--         Third Way ===> using p Schema  -->
+        
+        <bean class ="com.springcore.Student" name = "student1" 
+              p:studentId ="2234"
+              p:studentName ="Adarsh"
+              p:studentAddress = "Delhi"/>
+        
+
 
 
 
